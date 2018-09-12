@@ -1,0 +1,22 @@
+{
+  "name": "dist23",
+  "version": "1.0.0",
+  "description": "slide in dist23",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server 'docs' --files 'docs/index.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masuP9/dist23.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masuP9/dist23/issues"
+  },
+  "homepage": "https://github.com/masuP9/dist23#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.7"
+  }
+}
