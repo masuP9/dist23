@@ -4,7 +4,8 @@
   "description": "slide in dist23",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start --server 'docs' --files 'docs/index.html'"
+    "start": "browser-sync start --server 'docs' --files 'docs/index.html'",
+    "lint:html": "markuplint docs/index.html"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/masuP9/dist23#readme",
   "devDependencies": {
-    "browser-sync": "^2.24.7"
+    "browser-sync": "^2.24.7",
+    "markuplint": "^0.32.0"
   }
 }
