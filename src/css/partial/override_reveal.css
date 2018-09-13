@@ -1,0 +1,69 @@
+/*
+ * over ride reveal
+ * 主に reveal section 内の element selector を上書きする style
+ */
+
+.reveal section img {
+  box-shadow: none;
+  border: none;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-feature-settings: "palt" 1;
+  font-family: "Noto Sans CJK JP", "Hiragino Sans", "Meiryo", sans-serif;
+  text-transform: none;
+  margin-bottom: 0.8em;
+}
+
+.reveal h1 {
+  font-size: 2em;
+  text-align: left;
+}
+
+.reveal h2 {
+  font-size: 1.5em;
+  border-bottom: solid 10px #2D8C3C;
+  padding-bottom: 0.1em;
+  display: inline-block;
+}
+
+.reveal h3 {
+  font-size: 1.25em;
+}
+
+.reveal h4 {
+  font-size: 1.125em;
+}
+
+.reveal p {
+  margin: 0 0 1em;
+  line-height: 1.5;
+}
+
+.reveal p:last-child {
+  margin-bottom: 0;
+}
+
+.reveal li {
+  margin: 0 0 0.25em;
+}
+
+.reveal li li {
+  margin: 0 0 0.2em;
+}
+
+.reveal a {
+  text-decoration: underline;
+}
+
+.reveal blockquote {
+  width: auto;
+  box-shadow: none;
+  margin: 0;
+  background-color: transparent;
+}

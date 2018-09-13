@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>マークアップをパワーアップするWAI-ARIA</title>
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+  <link rel="stylesheet" href="css/additional.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>
+          <span class="u-dIb">マークアップを</span>
+          <span class="u-dIb">パワーアップする</span>
+          <abbr class="u-dIb" title="Web Accessibility Initiative - Accessible Rich Internet Application">WAI-ARIA</abbr>
+        </h1>
+        <footer>
+          <p class="u-taL">
+            <time datetime="2018-10-19">2018-10-19</time> DIST #23
+          </p>
+        </footer>
+      </section>
+      <section>
+        <h2>私たち</h2>
+      </section>
+      <section>
+        <h2>WAI-ARIAってなに</h2>
+      </section>
+      <section>
+        <h2>WAI-ARIAでなにができるの</h2>
+      </section>
+      <section>
+        <h2>WAI-ARIAってどういうときに使うの</h2>
+      </section>
+      <section>
+        <h2>WAI-ARIAをつけるな！</h2>
+      </section>
+      <section>
+        <h2>まとめ</h2>
+      </section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+      ]
+    });
+  </script>
+</body>
+</html>
