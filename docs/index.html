@@ -199,7 +199,7 @@
       </section>
 
       <section>
-        <h2>WAI-ARIAってどういうときに使うの</h2>
+        <h2>WAI-ARIAをどういうときに使うの</h2>
       </section>
       <section>
         <h3>aria-label</h3>
@@ -216,7 +216,7 @@
       </section>
       <section>
         <h4>ハンバーガーメニューのアイコン</h4>
-        <pre><code>
+        <pre><code class="html">
 <button role="button" aria-label="サイトメニューを表示する">
   <span></span>
   <span></span>
@@ -226,15 +226,15 @@
       </section>
       <section>
         <h4>ヘッダー、フッターのメニュー</h4>
-        <pre><code>
+        <pre><code class="html">
 <header>
   <h1><img src="..." alt=""></h1>
   <nav aria-label="グローバルナビ">
     <ul>
-      <li><a href="...">トップ</a></li>
-      <li><a href="...">メンバー紹介</a></li>
-      <li><a href="...">配信アーカイブ</a></li>
-      <li><a href="...">泥酔情報</a></li>
+      <li><a href="~">トップ</a></li>
+      <li><a href="~">メンバー紹介</a></li>
+      <li><a href="~">配信アーカイブ</a></li>
+      <li><a href="~">泥酔情報</a></li>
     </ul>
   </nav>
 </header>
@@ -242,10 +242,10 @@
       </section>
       <section>
         <h4>同じ文言のリンク</h4>
-        <pre><code>
-<a href="..." aria-label="泥酔事例について詳しく見る">more...</a>
-<a href="..." aria-label="配信機材について詳しく見る">more...</a>
-<a href="..." aria-label="放送予定について詳しく見る">more...</a>
+        <pre><code class="html">
+<a href="~" aria-label="泥酔事例について詳しく見る">more...</a>
+<a href="~" aria-label="配信機材について詳しく見る">more...</a>
+<a href="~" aria-label="放送予定について詳しく見る">more...</a>
         </code></pre>
       </section>
       <section>
@@ -258,10 +258,10 @@
 <p id="optionLabel">泥酔するなら？</p>
 
 <div role="radiogroup" aria-labelledby="optionLabel">
-  <input type="radio" name="alcohol" value="...">ハイボール
-  <input type="radio" name="alcohol" value="...">ストロングゼロ
-  <input type="radio" name="alcohol" value="...">99.99
-  <input type="radio" name="alcohol" value="...">テキーラ
+  <input type="radio" name="alcohol" value="~">ハイボール
+  <input type="radio" name="alcohol" value="~">ストロングゼロ
+  <input type="radio" name="alcohol" value="~">99.99
+  <input type="radio" name="alcohol" value="~">テキーラ
 </div>
         </code></pre>
       </section>
@@ -332,7 +332,7 @@
         </code></pre>
       </section>
       <section>
-        <h2>WAI-ARIAをつけるな！</h2>
+        <h2>WAI-ARIAの前に</h2>
       </section>
       <section>
         <p>そもそも問う</p>
@@ -349,27 +349,31 @@
         </ul>
       </section>
       <section>
-        <p>静的に手書きできるようなウェブサイトであれば、見出しを置きそれに紐づいたコンテンツの範囲を意識すれば情報設計は9割完了する。</p>
+        <p>WAI-ARIAを必要としないウェブサイトの価値は低いのか？</p>
+        <ul>
+          <li>見出し、ラベルは見えるように書くべきもの</li>
+          <li>タブやアコーディオンはそのまま並べていいのでは</li>
+        </ul>
       </section>
       <section>
         <p>しかしそうもいかないこんな世の中</p>
         <ul>
-          <li>SPA、そしてSSR</li>
+          <li>SPAとSSR</li>
           <li>何としても100vhに納めたいデザイン</li>
+          <li>何としてもフロントでエラーを伝えたいフォーム</li>
           <li>コンテンツ／ライティングの世界観</li>
-          <li>TODO: あとなんかもう１つあるあるなやつ</li>
         </ul>
       </section>
       <section>
-        <p>ビジュアルでコンテンツが犠牲になってないか？（晴眼者だけにしかわからないものになっていないか？）</p>
+        <p>どうしてもHTMLだけでは解決できないものがこの世には多すぎる……！</p>
       </section>
       <section>
-        <p>まずは素直に情報設計</p>
+        <p>まずは素直にマークアップで情報設計</p>
         <ul>
           <li>セクショニング</li>
           <li>見出し要素</li>
-          <li>表、リスト</li>
-          <li>ページ遷移はa要素、状態変化はbutton要素</li>
+          <li>表、リスト、</li>
+          <li>a要素、button要素</li>
           <li>alt</li>
         </ul>
       </section>
@@ -380,8 +384,7 @@
           <li>アコーディオン</li>
           <li>タブ</li>
           <li>ローディング</li>
-          <li>SPAならaria-alive</li>
-          <li>TODO: あといくつか</li>
+          <li>ライブリージョン</li>
         </ul>
       </section>
       <section>
@@ -392,6 +395,9 @@
       </section>
       <section>
         <p>ゆえに、もっともソリューションでなければならない。</p>
+      </section>
+      <section>
+        <p>HTML + JavaScript + WAI-ARIAで全ての人に情報を届けよう。</p>
       </section>
       <section>
         <p>ビジュアルリーダビリティとメタリーダビリティを両立せよ！</p>
