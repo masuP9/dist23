@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -22,6 +23,7 @@
     document.getElementsByTagName('head')[0].appendChild(link);
   </script>
 </head>
+
 <body>
   <div class="reveal">
     <div class="slides">
@@ -42,14 +44,16 @@
       </section>
       <section>
         <p class="u-taL u-dF -middle">
-          <img class="u-mr16" src="https://pbs.twimg.com/profile_images/978499970620731392/qr06jOW8_400x400.jpg" height="150" style="border-radius: 50%;" alt="@o_tiのプロフィール写真。机の上の卵かけご飯" />
+          <img class="u-mr16" src="https://pbs.twimg.com/profile_images/978499970620731392/qr06jOW8_400x400.jpg" height="150"
+            style="border-radius: 50%;" alt="@o_tiのプロフィール写真。机の上の卵かけご飯" />
           <span>
             <a href="https://twitter.com/o_ti">@o_ti</a><small class="u-ml4">(キレ手)</small>
             <span class="u-dB">株式会社まぼろし</span>
           </span>
         </p>
         <p class="u-taL u-dF -middle">
-          <img class="u-mr16" src="https://pbs.twimg.com/profile_images/876277125652729858/dzVcFs82_400x400.jpg" height="150" style="border-radius: 50%;" alt="@masuP9のプロフィール写真。ますぴーとかかれた木製のバッジの写真" />
+          <img class="u-mr16" src="https://pbs.twimg.com/profile_images/876277125652729858/dzVcFs82_400x400.jpg" height="150"
+            style="border-radius: 50%;" alt="@masuP9のプロフィール写真。ますぴーとかかれた木製のバッジの写真" />
           <span>
             <a href="https://twitter.com/masuP9">@masuP9</a><small class="u-ml4">(わかり手)</small>
             <span class="u-dB">株式会社サイバーエージェント</span>
@@ -189,15 +193,101 @@
         </ul>
       </section>
       <section>
-          <pre><code class="html"><ul role="tree" aria-label="menu tree">
-      <li role="treeitem" aria-selected="true">...</li>
-      <li role="treeitem" aria-selected="false">...</li>
-  </ul></code></pre>
+        <pre><code class="html"><ul role="tree" aria-label="menu tree">
+  <li role="treeitem" aria-selected="true">...</li>
+  <li role="treeitem" aria-selected="false">...</li>
+</ul></code></pre>
       </section>
       <section>
-        <p>TODO : ここから先はアクセシビリティオブジェクトモデルの説明</p>
+        <h3>役割 : <code>role</code></h3>
+        <p>これはツリーウィジェットである</p>
       </section>
-
+      <section>
+        <h3>状態 : ステート</h3>
+        <p>このツリーアイテムは選択されている（いない）</p>
+      </section>
+      <section>
+        <h3>プロパティ</h3>
+        <p>このツリーウィジェットの名前プロパティは<code class="u-dIb">menu tree</code>である</p>
+      </section>
+      <section>
+        <p>これらの付与されたセマンティクスはどのようにユーザー（支援技術）に伝わるか</p>
+      </section>
+      <section>
+        <h3>アクセシビリティ<abbr title="Application Programing Interface">API</abbr></h3>
+        <p>OSが支援技術にセマンティクスなどの情報を伝えるAPI</p>
+        <p>ブラウザがコンテンツをアクセシビリティAPIのオブジェクトに変換して支援技術に伝える</p>
+      </section>
+      <section>
+        <figure>
+          <svg xmlns="http://www.w3.org/2000/svg" width="961" height="609" viewBox="0 0 961 609">
+            <g fill="none" fill-rule="evenodd">
+              <g transform="translate(360 225)" class="fragment">
+                <rect width="297" height="149" x="1.5" y="1.5" fill="#FFF" stroke="#333" stroke-width="3" />
+                <text fill="#333" font-size="28" font-weight="bold">
+                  <tspan x="38" y="73">アクセシビリティ</tspan>
+                  <tspan x="123.54" y="101">API</tspan>
+                </text>
+              </g>
+              <rect width="297" height="606" x="1.5" y="1.5" fill="#FFF" stroke="#333" stroke-width="3" />
+              <g transform="translate(100 473)">
+                <rect width="174" height="58" x="1.5" y="1" stroke="#333" stroke-width="2" />
+                <text fill="#333" font-size="28" font-weight="bold">
+                  <tspan x="56.398" y="41">CSS</tspan>
+                </text>
+              </g>
+              <g transform="translate(100 290)">
+                <g transform="translate(26.5 53)">
+                  <rect width="121.135" height="44" x="1" y="1" stroke="#333" stroke-width="2" />
+                  <text fill="#333" font-size="28" font-weight="bold">
+                    <tspan x="18.154" y="34">HTML</tspan>
+                  </text>
+                </g>
+                <text fill="#333" font-size="28" font-weight="bold">
+                  <tspan x="26.77" y="37">DOM</tspan>
+                </text>
+                <rect width="174" height="111" x="1.5" y="1" stroke="#333" stroke-width="2" />
+              </g>
+              <g transform="translate(16 216)">
+                <rect width="55" height="230" x="1" y="1" stroke="#333" stroke-width="2" />
+                <text fill="#333" font-size="28" font-weight="bold">
+                  <tspan x="22" y="113">J</tspan>
+                  <tspan x="22" y="141">S</tspan>
+                </text>
+              </g>
+              <g transform="translate(87 170)">
+                <rect width="187" height="58" x="1.286" y="1" stroke="#333" stroke-width="2" />
+                <text fill="#333" font-size="28" font-weight="bold">
+                  <tspan x="18.262" y="41">WAI-ARIA</tspan>
+                </text>
+              </g>
+              <text fill="#333" font-size="32" font-weight="bold">
+                <tspan x="85" y="96">ブラウザ</tspan>
+              </text>
+              <path fill="#333" fill-rule="nonzero" d="M28.1149867,-1 L14.7694775,-8.50684893 L13.0263264,-9.48737141 L14.9873714,-12.9736736 L16.7305225,-11.9931511 L36.7305225,-0.743151074 L39.8294577,1 L36.7305225,2.74315107 L16.7305225,13.9931511 L14.9873714,14.9736736 L13.0263264,11.4873714 L14.7694775,10.5068489 L28.1149867,3 L15.75,3 L0.352657057,3 L-1.64734294,3 L-1.64734294,-1 L0.352657057,-1 L15.75,-1 L28.1149867,-1 Z"
+                transform="translate(75 345)" />
+              <path fill="#333" fill-rule="nonzero" d="M20.6656003,3.85862962 L5.92075648,7.98718589 L3.99482844,8.52644574 L2.91630874,4.67458967 L4.84223678,4.13532981 L26.9393237,-2.05185452 L30.3631958,-3.0105387 L29.4045116,0.41333337 L23.2173272,22.5104203 L22.6780674,24.4363483 L18.8262113,23.3578286 L19.3654712,21.4319006 L23.4940274,6.68705674 L14.7506615,15.4304227 L1.76687062,28.4142136 L0.352657057,29.8284271 L-2.47577007,27 L-1.06155651,25.5857864 L11.9222344,12.6019956 L20.6656003,3.85862962 Z"
+                transform="translate(75 212)" />
+              <path fill="#FFF" fill-rule="nonzero" d="M7.38501328,3.5 L20.7305225,11.0068489 L22.4736736,11.9873714 L20.5126286,15.4736736 L18.7694775,14.4931511 L-1.23052248,3.24315107 L-4.32945772,1.5 L-1.23052248,-0.243151074 L18.7694775,-11.4931511 L20.5126286,-12.4736736 L22.4736736,-8.98737141 L20.7305225,-8.00684893 L7.38501328,-0.5 L19.75,-0.5 L38.25,-0.5 L50.6149867,-0.5 L37.2694775,-8.00684893 L35.5263264,-8.98737141 L37.4873714,-12.4736736 L39.2305225,-11.4931511 L59.2305225,-0.243151074 L62.3294577,1.5 L59.2305225,3.24315107 L39.2305225,14.4931511 L37.4873714,15.4736736 L35.5263264,11.9873714 L37.2694775,11.0068489 L50.6149867,3.5 L38.25,3.5 L19.75,3.5 L7.38501328,3.5 Z"
+                transform="translate(659 303)" />
+              <path fill="#FFF" fill-rule="nonzero" d="M6.38501328,2.5 L19.7305225,10.0068489 L21.4736736,10.9873714 L19.5126286,14.4736736 L17.7694775,13.4931511 L-2.23052248,2.24315107 L-5.32945772,0.5 L-2.23052248,-1.24315107 L17.7694775,-12.4931511 L19.5126286,-13.4736736 L21.4736736,-9.98737141 L19.7305225,-9.00684893 L6.38501328,-1.5 L18.75,-1.5 L41.25,-1.5 L53.6149867,-1.5 L40.2694775,-9.00684893 L38.5263264,-9.98737141 L40.4873714,-13.4736736 L42.2305225,-12.4931511 L62.2305225,-1.24315107 L65.3294577,0.5 L62.2305225,2.24315107 L42.2305225,13.4931511 L40.4873714,14.4736736 L38.5263264,10.9873714 L40.2694775,10.0068489 L53.6149867,2.5 L41.25,2.5 L18.75,2.5 L6.38501328,2.5 Z"
+                transform="translate(300 304)" />
+              <text fill="#333" font-size="56" font-weight="300" transform="translate(170 411)">
+                <tspan x=".132" y="49">+</tspan>
+              </text>
+              <text fill="#333" font-size="56" font-weight="300" transform="translate(170 229)">
+                <tspan x=".132" y="49">+</tspan>
+              </text>
+              <g transform="translate(716 229)" class="fragment">
+                <rect width="242" height="149" x="1.5" y="1.5" fill="#FFF" stroke="#333" stroke-width="3" />
+                <text fill="#333" font-size="32" font-weight="bold">
+                  <tspan x="59" y="88">支援技術</tspan>
+                </text>
+              </g>
+            </g>
+          </svg>
+        </figure>
+      </section>
       <section>
         <h2>WAI-ARIAをどういうときに使うの</h2>
       </section>
@@ -424,4 +514,5 @@
     });
   </script>
 </body>
+
 </html>
