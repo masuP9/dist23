@@ -3,6 +3,10 @@
  * 主に reveal section 内の element selector を上書きする style
  */
 
+:root {
+  --color__accent: #fbe34c;
+}
+
 .reveal section img {
   box-shadow: none;
   border: none;
@@ -27,7 +31,7 @@
 
 .reveal h2 {
   font-size: 1.5em;
-  border-bottom: solid 10px #2D8C3C;
+  border-bottom: solid 10px var(--color__accent);
   padding-bottom: 0.1em;
   display: inline-block;
 }
