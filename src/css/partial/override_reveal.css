@@ -85,3 +85,10 @@
   color: var(--color__accent);
   font-style: normal;
 }
+
+.reveal pre code {
+  padding: 12px;
+  max-height: 800px;
+  font-size: 1.25em;
+  line-height: 1.25;
+}
