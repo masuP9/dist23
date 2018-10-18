@@ -71,6 +71,74 @@
         <h2>WAI-ARIAってなに</h2>
       </section>
       <section>
+        <pre class="u-fzL"><code class="html"><header role="banner">
+  hogehoge
+</header></code></pre>
+        <aside class="notes">
+          <p>こういうの見たことありませんか？この<code>role=&quot;banner&quot;がWAI-ARIAと呼ばれるものです。</code></p>
+        </aside>
+      </section>
+      <section>
+        <dl class="u-fzL">
+          <div>
+            <dt>WAI</dt>
+            <dd>
+              <b style="color: var(--color__accent)">W</b>eb&nbsp;
+              <b style="color: var(--color__accent)">A</b>ccessibility&nbsp;
+              <b style="color: var(--color__accent)">I</b>nitiative&nbsp;
+            </dd>
+          </div>
+          <div class="fragment">
+            <dt>ARIA</dt>
+            <dd>
+              <b style="color: var(--color__accent)">A</b>ccessible&nbsp;
+              <b style="color: var(--color__accent)">R</b>ich&nbsp;
+              <b style="color: var(--color__accent)">I</b>nternet&nbsp;
+              <b style="color: var(--color__accent)">A</b>pplications&nbsp;
+            </dd>
+          </div>
+        </dl>
+        <aside class="notes">
+          <p>WAIはW3Cの中のアクセシビリティに関連する分科会で、<abbr title="Web Contents Accessibility Guidelines">WCAG</abbr>などの仕様策定も行っている。</p>
+          <p>その中でWebアプリケーションをアクセシブルにするための仕様がWAI-ARIA</p>
+        </aside>
+      </section>
+      <section>
+        <h3>背景 : <abbr title="Hyper Text Markup Language">HTML</abbr>では足りない</h3>
+      </section>
+      <section>
+        <h4>アプリケーション化するWeb</h4>
+      </section>
+      <section>
+        <p>例えば、開発者は既存の要素とCSSとJavaScriptで、折りたたみツリーウィジェットの<em>ようなもの</em>を作る</p>
+      </section>
+      <section>
+        <p>それが折りたたみツリーウィジェットだと知覚できるのはなぜ？</p>
+        <p>ツリーを開くことができると知覚できるのはなぜ？</p>
+      </section>
+      <section>
+        <p>視覚的な<em>ぽさ</em>からUIや状態を知覚している</p>
+      </section>
+      <section>
+        <h4>どうするのか</h4>
+        <p>要素増やすの大変</p>
+      </section>
+      <section>
+        <p>思い出してごらん...</p>
+        <ul>
+          <li class="fragment"><code>section</code></li>
+          <li class="fragment"><code>article</code></li>
+          <li class="fragment"><code>hgroup</code></li>
+        </ul>
+      </section>
+      <section>
+        <p>属性でパワーアップ💪</p>
+      </section>
+      <section>
+        <h3>WAI-ARIAはHTMLに限らない</h3>
+        <p>ホスト（マークアップ）言語を拡張する。</p>
+      </section>
+      <section>
         <h2>WAI-ARIAでなにができるの</h2>
       </section>
       <section>
@@ -282,6 +350,8 @@
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
     Reveal.initialize({
+      slideNumber: true,
+      history: true,
       dependencies: [
         { src: 'plugin/markdown/marked.js' },
         { src: 'plugin/markdown/markdown.js' },
