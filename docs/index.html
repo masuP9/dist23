@@ -110,18 +110,48 @@
         <h4>アプリケーション化するWeb</h4>
       </section>
       <section>
-        <p>例えば、開発者は既存の要素とCSSとJavaScriptで、折りたたみツリーウィジェットの<em>ようなもの</em>を作る</p>
+        <p>
+          開発者は既存の要素とCSSとJavaScriptで
+          <span class="u-dIb">折りたたみツリーウィジェット</span>の
+          <span class="u-dIb"><em>ようなもの</em>を作る</span>
+        </p>
       </section>
       <section>
-        <p>それが折りたたみツリーウィジェットだと知覚できるのはなぜ？</p>
-        <p>ツリーを開くことができると知覚できるのはなぜ？</p>
+        <p>それが折りたたみツリーウィジェットだと<span class="u-dIb">知覚できるのはなぜ？</span></p>
+        <p class="fragment">ツリーを開くことができると<span class="u-dIb">知覚できるのはなぜ？</span></p>
       </section>
       <section>
-        <p>視覚的な<em>ぽさ</em>からUIや状態を知覚している</p>
+        <p>視覚的な<em>ぽさ</em>から<abbr title="User Interface">UI</abbr>や状態を知覚している</p>
+      </section>
+      <section>
+        <button type="button" style="transform: scale(10);border-radius: 1000px;">button</button>
+      </section>
+      <section>
+        <p>押せそう</p>
+      </section>
+      <section>
+        <p>視覚的な<em>ぽさ</em>を得られない場合にどう知覚するか</p>
+        <aside class="notes">
+          <p>例えば</p>
+          <ul>
+            <li>スクリーンーリーダー</li>
+            <li><abbr title="Voice User Interface">VUI</abbr>（Siri, Google Home, Amazon Echo）</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <pre class="u-fzL"><code class="html"><div>button</div></code></pre>
+      </section>
+      <section>
+        <p>押せなさそう</p>
+      </section>
+      <section>
+        <p>セマンティクス</p>
       </section>
       <section>
         <h4>どうするのか</h4>
-        <p>要素増やすの大変</p>
+        <p><code>&lt;tab&gt;&lt;/tab&gt;</code> ?</p>
+        <p class="fragment">要素増やすの大変</p>
       </section>
       <section>
         <p>思い出してごらん...</p>
@@ -133,13 +163,28 @@
       </section>
       <section>
         <p>属性でパワーアップ💪</p>
+        <p>WAI-ARIAは属性でセマンティクスを補強する</p>
+        <p>さらにホスト言語を進化させる役割</p>
       </section>
       <section>
         <h3>WAI-ARIAはHTMLに限らない</h3>
         <p>ホスト（マークアップ）言語を拡張する。</p>
+        <p><abbr title="Scalable Vector Graphics">SVG</abbr>や<abbr title="Extensible Markup Language">XML</abbr>も対象</p>
+        <aside class="notes">
+          <p>例えば地図のグラフィックス内で押したらポップアップとか</p>
+        </aside>
       </section>
       <section>
         <h2>WAI-ARIAでなにができるの</h2>
+      </section>
+      <section>
+        <p>HTML（ホスト言語）に足りないセマンティクスを補強できる</p>
+      </section>
+      <section>
+        <pre><code class="html"><ul role="tree" aria-label="menu tree">
+    <li role="treeitem" aria-selected="true">...</li>
+    <li role="treeitem" aria-selected="false">...</li>
+</ul></code></pre>
       </section>
       <section>
         <h2>WAI-ARIAってどういうときに使うの</h2>
