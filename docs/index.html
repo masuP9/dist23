@@ -199,7 +199,7 @@
       </section>
 
       <section>
-        <h2>WAI-ARIAってどういうときに使うの</h2>
+        <h2>WAI-ARIAをどういうときに使うの</h2>
       </section>
       <section>
         <h3>aria-label</h3>
@@ -332,7 +332,7 @@
         </code></pre>
       </section>
       <section>
-        <h2>WAI-ARIAをつけるな！</h2>
+        <h2>WAI-ARIAの前に</h2>
       </section>
       <section>
         <p>そもそも問う</p>
@@ -349,27 +349,31 @@
         </ul>
       </section>
       <section>
-        <p>静的に手書きできるようなウェブサイトであれば、見出しを置きそれに紐づいたコンテンツの範囲を意識すれば情報設計は9割完了する。</p>
+        <p>WAI-ARIAを必要としないウェブサイトの価値は低いのか？</p>
+        <ul>
+          <li>見出し、ラベルは見えるように書くべきもの</li>
+          <li>タブやアコーディオンはそのまま並べていいのでは</li>
+        </ul>
       </section>
       <section>
         <p>しかしそうもいかないこんな世の中</p>
         <ul>
-          <li>SPA、そしてSSR</li>
+          <li>SPAとSSR</li>
           <li>何としても100vhに納めたいデザイン</li>
+          <li>何としてもフロントでエラーを伝えたいフォーム</li>
           <li>コンテンツ／ライティングの世界観</li>
-          <li>TODO: あとなんかもう１つあるあるなやつ</li>
         </ul>
       </section>
       <section>
-        <p>ビジュアルでコンテンツが犠牲になってないか？（晴眼者だけにしかわからないものになっていないか？）</p>
+        <p>どうしてもHTMLだけでは解決できないものがこの世には多すぎる……！</p>
       </section>
       <section>
-        <p>まずは素直に情報設計</p>
+        <p>まずは素直にマークアップで情報設計</p>
         <ul>
           <li>セクショニング</li>
           <li>見出し要素</li>
-          <li>表、リスト</li>
-          <li>ページ遷移はa要素、状態変化はbutton要素</li>
+          <li>表、リスト、</li>
+          <li>a要素、button要素</li>
           <li>alt</li>
         </ul>
       </section>
@@ -380,8 +384,7 @@
           <li>アコーディオン</li>
           <li>タブ</li>
           <li>ローディング</li>
-          <li>SPAならaria-alive</li>
-          <li>TODO: あといくつか</li>
+          <li>ライブリージョン</li>
         </ul>
       </section>
       <section>
@@ -392,6 +395,9 @@
       </section>
       <section>
         <p>ゆえに、もっともソリューションでなければならない。</p>
+      </section>
+      <section>
+        <p>HTML + JavaScript + WAI-ARIAで全ての人に情報を届けよう。</p>
       </section>
       <section>
         <p>ビジュアルリーダビリティとメタリーダビリティを両立せよ！</p>
