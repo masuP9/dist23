@@ -343,18 +343,15 @@
       </section>
       <section>
         <h4>ハンバーガーメニューのアイコン</h4>
-        <pre><code class="html">
-<button role="button" aria-label="サイトメニューを表示する">
+        <pre><code class="html"><button aria-label="サイトメニューを表示する" type="button">
   <span></span>
   <span></span>
   <span></span>
-</button>
-        </code></pre>
+</button></code></pre>
       </section>
       <section>
         <h4>ヘッダー、フッターのメニュー</h4>
-        <pre><code class="html">
-<header>
+        <pre><code class="html"><header>
   <h1><img src="..." alt=""></h1>
   <nav aria-label="グローバルナビ">
     <ul>
@@ -364,15 +361,13 @@
       <li><a href="~">泥酔情報</a></li>
     </ul>
   </nav>
-</header>
-        </code></pre>
+</header></code></pre>
       </section>
       <section>
         <h4>同じ文言のリンク</h4>
         <pre><code class="html"><a href="~" aria-label="泥酔事例について詳しく見る">more...</a>
 <a href="~" aria-label="配信機材について詳しく見る">more...</a>
-<a href="~" aria-label="放送予定について詳しく見る">more...</a>
-        </code></pre>
+<a href="~" aria-label="放送予定について詳しく見る">more...</a></code></pre>
       </section>
       <section>
         <h3>aria-labelledby</h3>
@@ -380,7 +375,7 @@
       </section>
       <section>
         <h4>ラジオボタングループ</h4>
-        <pre><code><p id="optionLabel">泥酔するなら？</p>
+        <pre><code class="html"><p id="optionLabel">泥酔するなら？</p>
 
 <div role="radiogroup" aria-labelledby="optionLabel">
   <input type="radio" name="alcohol" value="~">ハイボール
@@ -416,15 +411,14 @@
       <a href="#tabItem1">越智</a>
     </li>
     <li>
-      <a href="#tabItem2">枡田</a>
+      <a href="#tabItem2">桝田</a>
     </li>
   </ul>
 </nav>
 <div>
   <div id="tabItem1">キレ手</div>
   <div id="tabItem2">わかり手</div>
-</div>
-        </code></pre>
+</div></code></pre>
       </section>
       <section>
         <h4>WAI-ARIAあり</h4>
@@ -434,15 +428,14 @@
       <a href="#tabItem1" id="tabItem1" role="tab" aria-controls="tabItem1" aria-selected="true">越智</a>
     </li>
     <li role="presentation">
-      <a href="#tabItem2" id="tabItem2" role="tab" aria-controls="tabItem2" aria-selected="false">枡田</a>
+      <a href="#tabItem2" id="tabItem2" role="tab" aria-controls="tabItem2" aria-selected="false">桝田</a>
     </li>
   </ul>
 </nav>
 <div>
   <div id="tabItem1" role="tabpanel" aria-labelledby="tabItem1" aria-hidden="false">キレ手</div>
   <div id="tabItem2" role="tabpanel" aria-labelledby="tabItem2" aria-hidden="true">わかり手</div>
-</div>
-        </code></pre>
+</div></code></pre>
       </section>
       <section>
         <h3>aria-live</h3>
