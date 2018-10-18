@@ -441,8 +441,44 @@
 </div></code></pre>
       </section>
       <section>
-        <h3>aria-live</h3>
-        <p>ページ内に更新があっったことを<br>ユーザーへ伝える。</p>
+        <h3>ライブリージョン</h3>
+        <p>更新される領域であることを支援技術に伝える</p>
+      </section>
+      <section>
+        <ul>
+          <li>チャット</li>
+          <li>株価表示ウィジェット</li>
+          <li>スポーツのテキスト実況</li>
+          <li>フォームの入力エラー</li>
+        </ul>
+        <p>etc...</p>
+      </section>
+      <section>
+        <pre><code class="html"><ol role="log" aria-live="polite">
+  <li>魔界合宿</li>
+  <li>「人はすぐ死ぬ」</li>
+  <li>伊東家のこじらせ</li>
+  <li>マスみがある</li>
+</ol></code></pre>
+      </section>
+      <section>
+        <pre><code class="html"><ol role="log" aria-live="polite">
+  <li>魔界合宿</li>
+  <li>「人はすぐ死ぬ」</li>
+  <li>伊東家のこじらせ</li>
+  <li>マスみがある</li>
+  <li>例え話下手くそ選手権優勝</li> <!-- New -->
+</ol></code></pre>
+      </section>
+      <section>
+        <p>ライブリージョンロールは暗黙の<code>aria-live</code>を持つが、暗黙の~に対応していない<abbr title="User Agent">UA</abbr>のために併記することが多い。</p>
+      </section>
+      <section>
+        <h3>他の例などは</h3>
+        <ul>
+          <li><a href="https://www.amazon.co.jp/dp/B06XWC1TWC/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1">コーディングウェブアクセシビリティ</a></li>
+          <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/">WAI-ARIA Authoring Practice</a></li>
+        </ul>
       </section>
       <section>
         <h2>WAI-ARIAの前に</h2>
