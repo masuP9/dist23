@@ -61,15 +61,16 @@
         </p>
       </section>
       <section>
-        <p>
-          <span class="u-dB">マークアップ生まれ</span>
-          <span class="u-dB">マークアップ育ち</span>
-          <span class="u-dB">フロントエンドエンジニア</span>
-        </p>
+        <ul>
+          <li class="u-dB">マークアップ生まれ</li>
+          <li class="u-dB fragment">マークアップ育ち</li>
+          <li class="u-dB fragment">フロントエンドエンジニア</li>
+          <li class="u-dB fragment">受託魔族はだいたい友達</li>
+        </ul>
       </section>
       <section>
         <h3>#deisui_html_radio</h3>
-        <p>ウェブ制作をこじらせたオレたちが<br>歩いてきた道は何か、進むべき道はどこかを探る（ただの飲み配信）</p>
+        <p class="fragment">ウェブ制作をこじらせたオレたちが<br>歩いてきた道は何か、進むべき道はどこかを探る<br>（ただの飲み配信）</p>
       </section>
       <section>
         <h2>WAI-ARIAってなに</h2>
@@ -215,8 +216,8 @@
       </section>
       <section>
         <h3>アクセシビリティ<abbr title="Application Programing Interface">API</abbr></h3>
-        <p>OSが支援技術にセマンティクスなどの情報を伝えるAPI</p>
-        <p>ブラウザがコンテンツをアクセシビリティAPIのオブジェクトに変換して支援技術に伝える</p>
+        <p>OSが支援技術にセマンティクスなどの<br>情報を伝えるAPI</p>
+        <p>ブラウザがコンテンツをアクセシビリティAPIの<br>オブジェクトに変換して支援技術に伝える</p>
       </section>
       <section>
         <figure>
@@ -308,7 +309,7 @@
         <p>スクリーンリーダーが読み上げることができる</p>
       </section>
       <section>
-        <p>ビジュアル的に見出しを置きづらいコンテンツに<br>代替としてラベルを設定できる</p>
+        <p>見出しやラベルを置きづらいコンテンツに<br>代替テキストを設定できる</p>
       </section>
       <section>
         <h4>ハンバーガーメニューのアイコン</h4>
@@ -338,20 +339,18 @@
       </section>
       <section>
         <h4>同じ文言のリンク</h4>
-        <pre><code class="html">
-<a href="~" aria-label="泥酔事例について詳しく見る">more...</a>
+        <pre><code class="html"><a href="~" aria-label="泥酔事例について詳しく見る">more...</a>
 <a href="~" aria-label="配信機材について詳しく見る">more...</a>
 <a href="~" aria-label="放送予定について詳しく見る">more...</a>
         </code></pre>
       </section>
       <section>
         <h3>aria-labelledby</h3>
-        <p>見出し要素を置けないようなコンテンツで、<br>他にラベルたるテキストがある場合、<br>その要素にid属性をつけて<code>aria-labelledby</code>で紐付ける</p>
+        <p>離れた要素のテキストをラベルとして使う</p>
       </section>
       <section>
         <h4>ラジオボタングループ</h4>
-        <pre><code>
-<p id="optionLabel">泥酔するなら？</p>
+        <pre><code><p id="optionLabel">泥酔するなら？</p>
 
 <div role="radiogroup" aria-labelledby="optionLabel">
   <input type="radio" name="alcohol" value="~">ハイボール
@@ -360,117 +359,105 @@
   <input type="radio" name="alcohol" value="~">テキーラ
 </div>
         </code></pre>
+        <p>「泥酔するなら？」というラベルの<br>ラジオボタングループになる</p>
       </section>
       <section>
         <h3>aria-controls</h3>
-        <p>自身が別要素の状態を制御していることを示す。</p>
+        <p>自身が別要素の状態を制御することを示す。</p>
         <p>「状態」はJavaScriptで操作する。</p>
         <p></p>
       </section>
       <section>
-        <h4>アコーディオン<br>（エキスパンダー／ディスクロージャ）</h4>
-        <pre><code>
-<h3>
-  <a
-    href="#disclosure1"
-    aria-controls="disclosure1"
-    aria-expanded="false"
-  >日本酒泥酔事件とは</a>
-</h3>
-<div id="disclosure1">
-  日本酒泥酔事件とは、2018年の夏...
-</div>
-        </code></pre>
+        <h3>タブ</h3>
+        <p class="fragment">同じ表示領域で内容が切り替わるウィジェット</p>
+        <ul>
+          <li class="fragment">role="tablist"</li>
+          <li class="fragment">role="tab"</li>
+          <li class="fragment">role="tabpanel"</li>
+          <li class="fragment">aria-selected</li>
+          <li class="fragment">aria-hidden</li>
+        </ul>
       </section>
       <section>
-        <h3>role="tablist", role="tab", role="tabpanel"</h3>
-        <p>「タブ」</p>
-      </section>
-      <section>
-        <h4></h4>
-        <pre><code>
-<nav>
-  <ul role="tablist">
-    <li role="presentation">
-      <a
-        href="#tabItem1"
-        id="tabItem1"
-        role="tab"
-        aria-controls="tabItem1"
-        aria-selected="true"
-      >越智</a>
+        <h4>WAI-ARIAなし</h4>
+        <pre><code><nav>
+  <ul>
+    <li>
+      <a href="#tabItem1">越智</a>
     </li>
-    <li role="presentation">
-      <a
-        href="#tabItem2"
-        id="tabItem2"
-        role="tab"
-        aria-controls="tabItem2"
-        aria-selected="false"
-      >枡田</a>
+    <li>
+      <a href="#tabItem2">枡田</a>
     </li>
   </ul>
 </nav>
 <div>
-  <div
-    id="tabItem1"
-    role="tabpanel"
-    aria-labelledby="tabItem1"
-    aria-hidden="false"
-  >キレ手</div>
-  <div
-    id="tabItem2"
-    role="tabpanel"
-    aria-labelledby="tabItem2"
-    aria-hidden="true"
-  >わかり手</div>
+  <div id="tabItem1">キレ手</div>
+  <div id="tabItem2">わかり手</div>
 </div>
         </code></pre>
+      </section>
+      <section>
+        <h4>WAI-ARIAあり</h4>
+        <pre><code><nav>
+  <ul role="tablist">
+    <li role="presentation">
+      <a href="#tabItem1" id="tabItem1" role="tab" aria-controls="tabItem1" aria-selected="true">越智</a>
+    </li>
+    <li role="presentation">
+      <a href="#tabItem2" id="tabItem2" role="tab" aria-controls="tabItem2" aria-selected="false">枡田</a>
+    </li>
+  </ul>
+</nav>
+<div>
+  <div id="tabItem1" role="tabpanel" aria-labelledby="tabItem1" aria-hidden="false">キレ手</div>
+  <div id="tabItem2" role="tabpanel" aria-labelledby="tabItem2" aria-hidden="true">わかり手</div>
+</div>
+        </code></pre>
+      </section>
+      <section>
+        <h3>aria-live</h3>
+        <p>ページ内に更新があっったことを<br>ユーザーへ伝える。</p>
       </section>
       <section>
         <h2>WAI-ARIAの前に</h2>
       </section>
       <section>
         <p>そもそも問う</p>
-      </section>
-      <section>
-        <p>なぜWAI-ARIAが必要なのか？</p>
+        <p class="fragment">WAI-ARIAを書く必要があるのか？</p>
       </section>
       <section>
         <ul>
           <li>見出しがちゃんと付けばいいちゃう？</li>
-          <li>そこ本当にアコーディオンな必要ある？</li>
-          <li>そこ本当にタブな必要ある？</li>
-          <li>なんで英語？</li>
+          <li class="fragment">そこ本当にアコーディオンな必要ある？</li>
+          <li class="fragment">そこ本当にタブな必要ある？</li>
+          <li class="fragment">なんで英語？</li>
         </ul>
       </section>
       <section>
-        <p>WAI-ARIAを必要としないウェブサイトの価値は低いのか？</p>
-        <ul>
-          <li>見出し、ラベルは見えるように書くべきもの</li>
-          <li>タブやアコーディオンはそのまま並べていいのでは</li>
-        </ul>
+        <p>見出しやラベルは見えるように書いていきたい。</p>
+        <p class="fragment">タブやアコーディオンはそのまま並べたい。</p>
+        <p class="fragment">だってJS実装いらなくなるし！！！</p>
       </section>
       <section>
         <p>しかしそうもいかないこんな世の中</p>
         <ul>
-          <li>SPAとSSR</li>
-          <li>何としても100vhに納めたいデザイン</li>
-          <li>何としてもフロントでエラーを伝えたいフォーム</li>
-          <li>コンテンツ／ライティングの世界観</li>
+          <li class="fragment">SPAとSSR</li>
+          <li class="fragment">コンテンツ／ライティングの世界観</li>
+          <li class="fragment">何としても100vhに納めたいデザイン</li>
+          <li class="fragment">何としてもその場でエラーを伝えたいフォーム</li>
         </ul>
       </section>
       <section>
-        <p>どうしてもHTMLだけでは解決できないものがこの世には多すぎる……！</p>
+        <p>HTMLだけでは解決できない現実よ</p>
       </section>
       <section>
         <p>まずは素直にマークアップで情報設計</p>
         <ul>
-          <li>セクショニング</li>
-          <li>見出し要素</li>
-          <li>表、リスト、</li>
-          <li>a要素、button要素</li>
-          <li>alt</li>
+          <li class="fragment">セクショニング</li>
+          <li class="fragment">見出し要素</li>
+          <li class="fragment">表、リスト、引用、図版</li>
+          <li class="fragment">a要素、button要素</li>
+          <li class="fragment">alt</li>
         </ul>
       </section>
       <section>
@@ -490,13 +477,16 @@
         <p>マークアップは世の中でもっとも難しい。</p>
       </section>
       <section>
-        <p>ゆえに、もっともソリューションでなければならない。</p>
+        <p>ゆえに、<br>もっともソリューションでなければならない。</p>
       </section>
       <section>
-        <p>HTML + JavaScript + WAI-ARIAで全ての人に情報を届けよう。</p>
+        <p>HTML + JavaScript + WAI-ARIAで<br>「非アクセシブル」を解決しよう！</p>
       </section>
       <section>
-        <p>ビジュアルリーダビリティとメタリーダビリティを両立せよ！</p>
+        <p>WAI-ARIAでマシンリーダビリティーを上げれば<br>ヒューマンリーダビリティーがついて来る。</p>
+      </section>
+      <section>
+        <p>マークアップをパワーアップさせて<br>全ての人に等しく情報を届けよう！</p>
       </section>
     </div>
   </div>
