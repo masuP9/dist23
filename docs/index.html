@@ -122,19 +122,16 @@
       </section>
       <section>
         <p>
-          WAI-ARIAはアクセシビリティを高めるために<br />
-          マークアップ言語にセマンティクスを<br />補強するためのもの
+          WAI-ARIAはアクセシビリティを高めるため<br />
+          マークアップ言語のセマンティクスを<br />補強するためのもの
         </p>
       </section>
       <section>
-        <h3>背景 : <abbr title="Hyper Text Markup Language">HTML</abbr>では足りない</h3>
-      </section>
-      <section>
-        <h4>アプリケーション化するWeb</h4>
+        <h3>背景 : アプリケーション化するWeb</h3>
       </section>
       <section>
         <p>
-          開発者は既存の要素とCSSとJavaScriptで
+          開発者はHTML要素とCSSとJavaScriptで
           <span class="u-dIb">折りたたみツリーウィジェット</span>の
           <span class="u-dIb"><em>ようなもの</em>を作る</span>
         </p>
@@ -144,7 +141,7 @@
         <p class="fragment">ツリーを開くことができると<span class="u-dIb">知覚できるのはなぜ？</span></p>
       </section>
       <section>
-        <p>視覚的な<em>ぽさ</em>から<abbr title="User Interface">UI</abbr>や状態を知覚している</p>
+        <p>視覚的な<em>ぽさ</em>から役割や状態を知覚している</p>
       </section>
       <section>
         <button type="button" style="transform: scale(10);border-radius: 1000px;">button</button>
@@ -174,7 +171,7 @@
       <section>
         <h4>どうするのか</h4>
         <p><code>&lt;tab&gt;&lt;/tab&gt;</code> ?</p>
-        <p class="fragment">要素増やすの大変</p>
+        <p class="fragment">要素を増やすのは大変やったやん...</p>
       </section>
       <section>
         <p>思い出してごらん...</p>
@@ -211,9 +208,9 @@
       <section>
         <p>WAI-ARIAは何を付与できるか</p>
         <ul>
-          <li>役割</li>
-          <li>状態</li>
-          <li>プロパティ</li>
+          <li>役割 : <code>role</code></li>
+          <li>状態 : <code>aria-*</code></li>
+          <li>プロパティ : <code>aria-*</code></li>
         </ul>
       </section>
       <section>
@@ -224,14 +221,17 @@
       </section>
       <section>
         <h3>役割 : <code>role</code></h3>
+        <pre><code class="html"><ul role="tree"></ul></code></pre>
         <p>これはツリーウィジェットである</p>
       </section>
       <section>
         <h3>状態 : ステート</h3>
+        <pre><code class="html"><li aria-selected="true">...</li></code></pre>
         <p>このツリーアイテムは選択されている（いない）</p>
       </section>
       <section>
         <h3>プロパティ</h3>
+        <pre><code class="html"><ul aria-label="menu tree"></ul></code></pre>
         <p>このツリーウィジェットの名前プロパティは<code class="u-dIb">menu tree</code>である</p>
       </section>
       <section>
@@ -240,7 +240,9 @@
       <section>
         <h3>アクセシビリティ<abbr title="Application Programing Interface">API</abbr></h3>
         <p>OSが支援技術にセマンティクスなどの<br>情報を伝えるAPI</p>
-        <p>ブラウザがコンテンツをアクセシビリティAPIの<br>オブジェクトに変換して支援技術に伝える</p>
+      </section>
+      <section>
+        <p>ブラウザがレンダリングしているコンテンツを<br>アクセシビリティAPIのオブジェクトに変換して<br>支援技術に伝える</p>
       </section>
       <section>
         <figure>
@@ -396,11 +398,11 @@
         <h3>タブ</h3>
         <p>同じ表示領域で内容が切り替わるウィジェット</p>
         <ul>
-          <li class="fragment">role="tablist"</li>
-          <li class="fragment">role="tab"</li>
-          <li class="fragment">role="tabpanel"</li>
-          <li class="fragment">aria-selected</li>
-          <li class="fragment">aria-hidden</li>
+          <li class="fragment"><code>role=&quot;tablist&quot;</code></li>
+          <li class="fragment"><code>role=&quot;tab&quot;</code></li>
+          <li class="fragment"><code>role=&quot;tabpanel&quot;</code></li>
+          <li class="fragment"><code>aria-selected</code></li>
+          <li class="fragment"><code>aria-hidden</code></li>
         </ul>
       </section>
       <section>
@@ -486,7 +488,7 @@
       </section>
       <section>
         <ul>
-          <li>見出しがちゃんと付けばいいちゃう？</li>
+          <li>見出しがちゃんと付けばいいんちゃう？</li>
           <li class="fragment">そこ本当にアコーディオンな必要ある？</li>
           <li class="fragment">そこ本当にタブな必要ある？</li>
           <li class="fragment">なんで英語？</li>
@@ -568,5 +570,4 @@
     });
   </script>
 </body>
-
 </html>
