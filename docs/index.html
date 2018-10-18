@@ -346,7 +346,7 @@
       </section>
       <section>
         <h4>ハンバーガーメニューのアイコン</h4>
-        <pre><code class="html"><button aria-label="サイトメニューを表示する" type="button">
+        <pre><code class="html"><button type="button" aria-label="サイトメニューを表示する">
   <span></span>
   <span></span>
   <span></span>
@@ -391,13 +391,11 @@
       </section>
       <section>
         <h3>aria-controls</h3>
-        <p>自身が別要素の状態を制御することを示す。</p>
-        <p>「状態」はJavaScriptで操作する。</p>
-        <p></p>
+        <p>自身が別要素の状態を制御することを示す</p>
       </section>
       <section>
         <h3>タブ</h3>
-        <p class="fragment">同じ表示領域で内容が切り替わるウィジェット</p>
+        <p>同じ表示領域で内容が切り替わるウィジェット</p>
         <ul>
           <li class="fragment">role="tablist"</li>
           <li class="fragment">role="tab"</li>
@@ -428,16 +426,16 @@
         <pre><code><nav>
   <ul role="tablist">
     <li role="presentation">
-      <a href="#tabItem1" id="tabItem1" role="tab" aria-controls="tabItem1" aria-selected="true">越智</a>
+      <a href="#tabItem1"role="tab" aria-controls="tabItem1" aria-selected="true" id="tabBtn1">越智</a>
     </li>
     <li role="presentation">
-      <a href="#tabItem2" id="tabItem2" role="tab" aria-controls="tabItem2" aria-selected="false">桝田</a>
+      <a href="#tabItem2"role="tab" aria-controls="tabItem2" aria-selected="false" id="tabBtn2">桝田</a>
     </li>
   </ul>
 </nav>
 <div>
-  <div id="tabItem1" role="tabpanel" aria-labelledby="tabItem1" aria-hidden="false">キレ手</div>
-  <div id="tabItem2" role="tabpanel" aria-labelledby="tabItem2" aria-hidden="true">わかり手</div>
+  <div id="tabItem1" role="tabpanel" aria-labelledby="tabBtn1" aria-hidden="false">キレ手</div>
+  <div id="tabItem2" role="tabpanel" aria-labelledby="tabBtn2" aria-hidden="true">わかり手</div>
 </div></code></pre>
       </section>
       <section>
@@ -492,7 +490,6 @@
           <li>a要素内のテキストだけで伝わるか？</li>
           <li>アコーディオン</li>
           <li>タブ</li>
-          <li>ローディング</li>
           <li>ライブリージョン</li>
         </ul>
       </section>
@@ -506,7 +503,7 @@
         <p>ゆえに、<br>もっともソリューションでなければならない。</p>
       </section>
       <section>
-        <p>HTML + JavaScript + WAI-ARIAで<br>「非アクセシブル」を解決しよう！</p>
+        <p>HTML + WAI-ARIA + JavaScriptで<br>「非アクセシブル」を解決しよう！</p>
       </section>
       <section>
         <p>WAI-ARIAでマシンリーダビリティーを上げれば<br>ヒューマンリーダビリティーがついて来る。</p>
