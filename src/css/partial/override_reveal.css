@@ -24,6 +24,15 @@
   margin-bottom: 0.8em;
 }
 
+.reveal h1 a,
+.reveal h2 a,
+.reveal h3 a,
+.reveal h4 a,
+.reveal h5 a,
+.reveal h6 a {
+  text-decoration: none;
+}
+
 .reveal h1 {
   font-size: 2em;
   text-align: left;
